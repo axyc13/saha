@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import placeholder from "@/public/placeholder.jpg";
 
 export default function Hero() {
@@ -14,6 +15,9 @@ export default function Hero() {
           amet, consectetur adipiscing elit. Mauris eu molestie felis, nec
           imperdiet metus.
         </p>
+        <Link href="/contactus">
+          <button>Contact Us</button>
+        </Link>
       </div>
       <div>
         <Image

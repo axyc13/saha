@@ -14,8 +14,8 @@ export default function Header() {
   };
 
   return (
-    <header className="relative">
-      <div className="p-5 text-white bg-black flex items-center gap-15">
+    <header className="relative text-white bg-black ">
+      <div className="px-10 py-3 flex items-center gap-15">
         <Link href="/">
           <h1 className="text-3xl shrink-0">Saha</h1>
         </Link>
