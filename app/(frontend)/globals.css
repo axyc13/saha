@@ -44,3 +44,15 @@ button:hover {
 * {
   font-family: var(--font-inter);
 }
+
+.extendedAnimationOpen {
+  opacity: 100;
+  translate: 0;
+  pointer-events: auto;
+}
+
+.extendedAnimationClose {
+  opacity: 0;
+  translate: 0, 5;
+  pointer-events: none;
+}

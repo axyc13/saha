@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function WhoWeAreExtended() {
   return (
-    <div className="w-full h-90 text-white bg-black">
+    <div className=" text-white bg-black ">
       <div className="flex flex-row px-15 py-5">
         <div className="border-r-2 pr-15">
           <h2 className="text-2xl pb-8">Who We Are</h2>

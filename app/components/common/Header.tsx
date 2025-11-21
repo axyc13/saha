@@ -14,12 +14,12 @@ export default function Header() {
   };
 
   return (
-    <header>
+    <header className="relative">
       <div className="p-5 text-white bg-black flex items-center gap-15">
         <Link href="/">
           <h1 className="text-3xl shrink-0">Saha</h1>
         </Link>
-        <nav className="flex gap-6 flex-1 items-center">
+        <nav className="flex gap-6 flex-1 items-center text-sm">
           <div
             className="flex items-center cursor-pointer"
             onClick={() => toggleOpen("whoweare")}
@@ -53,10 +53,32 @@ export default function Header() {
             Careers
           </Link>
         </nav>
-        <p className="shrink-0 p-1">NZ-EN</p>
+        <p className="shrink-0 p-1 text-sm">NZ-EN</p>
       </div>
-      {open == "whoweare" && <WhoWeAreExtended />}
-      {open == "services" && <ServicesExtended />}
+
+      <div
+        className={`
+      absolute left-0 top-full w-full z-50
+      transition-all duration-300
+      ${
+        open === "whoweare" ? "extendedAnimationOpen" : "extendedAnimationClose"
+      }
+    `}
+      >
+        <WhoWeAreExtended />
+      </div>
+
+      <div
+        className={`
+      absolute left-0 top-full w-full z-50
+      transition-all duration-300
+      ${
+        open === "services" ? "extendedAnimationOpen" : "extendedAnimationClose"
+      }
+    `}
+      >
+        <ServicesExtended />
+      </div>
     </header>
   );
 }
