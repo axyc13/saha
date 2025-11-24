@@ -6,10 +6,10 @@ export default async function Contact() {
   const sections: Policy[] = await getPolicies();
 
   return (
-    <section className="w-screen text-black px-30 justify-between py-10">
-      <div className="flex flex-col gap-10">
+    <section className="w-screen text-black px-32 justify-between py-8">
+      <div className="flex flex-col gap-8">
         {sections.map((sec) => (
-          <div key={sec.id} className="px-15">
+          <div key={sec.id} className="px-16">
             <h1 className="text-3xl">{sec.title}</h1>
             <br />
             <p className="text-md whitespace-pre-line">{sec.body}</p>

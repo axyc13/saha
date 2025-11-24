@@ -15,11 +15,11 @@ export default function Header() {
 
   return (
     <header className="relative text-white bg-black ">
-      <div className="px-10 py-3 flex items-center gap-15">
+      <div className="px-8 py-4 flex items-center gap-15">
         <Link href="/">
           <h1 className="text-3xl shrink-0">Saha</h1>
         </Link>
-        <nav className="flex gap-6 flex-1 items-center text-sm">
+        <nav className="flex gap-8 flex-1 items-center text-sm">
           <div
             className="flex items-center cursor-pointer"
             onClick={() => toggleOpen("whoweare")}

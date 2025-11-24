@@ -4,15 +4,15 @@ import placeholder from "@/public/placeholder.jpg";
 
 export default function Hero() {
   return (
-    <section className="w-screen h-screen text-black flex flex-col gap-10">
+    <section className="w-screen h-screen text-black flex flex-col gap-8">
       <div>
         <Image
           src={placeholder}
           alt="Placeholder"
-          className="w-screen h-[55vh]"
+          className="w-screen h-[56vh]"
         />
       </div>
-      <div className="flex flex-col gap-8 px-10">
+      <div className="flex flex-col gap-8 px-8">
         <h1 className="text-6xl">Contact Us</h1>
         <p className="break-normal w-[80vw]">
           Whether it&apos;s business-related inquiries or if you&apos;re curious
