@@ -15,13 +15,10 @@ export default function Hero() {
       <div className="flex flex-col gap-8 px-8">
         <h1 className="text-6xl">Who We Are</h1>
         <p className="break-normal w-[80vw]">
-          Short Blub, Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Mauris eu molestie felis, nec imperdiet metus. Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit. Mauris eu molestie felis, nec
-          imperdiet metus. Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Mauris eu molestie felis, nec imperdiet metus. Lorem ipsum dolor
-          sit amet, consectetur adipiscing elit. Mauris eu molestie felis, nec
-          imperdiet metus.
+          At Saha, we help clients build trust and reinvent so they can turn
+          complexity into competitive advantage. We&apos;re passionate about
+          helping businesses&apos; succeed, the public sector to achieve more,
+          and our communities to grow.
         </p>
       </div>
     </section>

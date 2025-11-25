@@ -7,10 +7,11 @@ export default function WhoWeAreExtended() {
       <div className="flex flex-row px-16 py-4">
         <div className="border-r-2 pr-16">
           <h2 className="text-2xl pb-8">Who We Are</h2>
-          <p className="text-sm break-normal w-48 pb-8">
-            Short description why Saha does services or smth. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Mauris eu molestie felis, nec
-            imperdiet metus.
+          <p className="text-sm break-normal w-56 pb-8">
+            At Saha, we help clients build trust and reinvent so they can turn
+            complexity into competitive advantage. We&apos;re passionate about
+            helping businesses&apos; succeed, the public sector to achieve more,
+            and our communities to grow.
           </p>
           <Link href="/whoweare">
             <button>Explore</button>
