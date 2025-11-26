@@ -27,7 +27,7 @@ export default function Footer() {
             <h2 className="text-3xl pb-8">Quick Links</h2>
             <div className="flex flex-col gap-5">
               <Link href="/whoweare">About Saha</Link>
-              <Link href="/whoweare">Our Values</Link>
+              <Link href="/whoweare/#values">Our Values</Link>
               <Link href="/whoweare/people">Our People</Link>
               <Link href="/services">What We Do</Link>
             </div>

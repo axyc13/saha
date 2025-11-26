@@ -17,8 +17,8 @@ export default function Hero() {
         <p className="break-normal w-[80vw]">
           At Saha, we help clients build trust and reinvent so they can turn
           complexity into competitive advantage. We&apos;re passionate about
-          helping businesses&apos; succeed, the public sector to achieve more,
-          and our communities to grow.
+          helping businesses succeed, the public sector to achieve more, and our
+          communities to grow.
         </p>
       </div>
     </section>

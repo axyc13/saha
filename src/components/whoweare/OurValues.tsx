@@ -1,20 +1,16 @@
 import React from "react";
-import Image from "next/image";
-import placeholder from "@/public/placeholder.jpg";
+import ValueCard from "./ValueCard";
 
 export default function OurValues() {
   return (
-    <section className="w-screen h-screen text-black flex flex-col gap-8">
-      <div>
-        <Image
-          src={placeholder}
-          alt="Placeholder"
-          className="w-screen h-[56vh]"
-        />
-      </div>
-      <div className="flex flex-col gap-8 px-8">
-        <h1 className="text-6xl">OUR VALUES</h1>
-        <p className="break-normal w-[80vw]">dsjfdhsn</p>
+    <section
+      id="values"
+      className="w-screen h-screen text-black flex flex-col gap-8"
+    >
+      <h1 className="text-6xl px-8">Our Values</h1>
+
+      <div className="bg-black h-[80vh] w-screen">
+        <ValueCard />
       </div>
     </section>
   );
