@@ -4,8 +4,8 @@ import placeholder from "@/public/placeholder.jpg";
 
 export default function Hero() {
   return (
-    <section className="w-screen h-screen text-white text-shadow-lg">
-      <div className="relative w-full h-[56vh] flex items-center">
+    <section className="w-screen h-[80vh] text-white text-shadow-lg">
+      <div className="relative w-full h-[64vh] flex items-baseline-last py-16">
         <Image
           src={placeholder}
           alt="Placeholder"
@@ -15,13 +15,11 @@ export default function Hero() {
         <div className="flex flex-col gap-8 px-8 relative z-10 ">
           <h1 className="text-6xl">Strong governance for a bold future</h1>
           <p className="break-normal w-[80vw]">
-            Good governance sits at the heart of Saha. <br /> Our work is built
-            on trust; trust that comes from honesty, discipline, and doing the
+            Good governance sits at the heart of Saha. Our work is built on
+            trust; trust that comes from honesty, discipline, and doing the
             right thing even when no one is watching. Across every engagement,
             our clients know what to expect from us: clarity, integrity, and
-            commitment. <br /> As we grow, our governance approach ensures that
-            our standards stay high, our decisions stay aligned to our purpose,
-            and our people stay grounded in the values that define us.
+            commitment.
           </p>
         </div>
       </div>

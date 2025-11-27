@@ -4,8 +4,8 @@ import placeholder from "@/public/placeholder.jpg";
 
 export default function Hero() {
   return (
-    <section className="w-screen h-screen text-white text-shadow-lg">
-      <div className="relative w-full h-[56vh] flex items-center">
+    <section className="w-screen h-[64vh] text-white text-shadow-lg">
+      <div className="relative w-full h-[56vh] flex items-baseline-last py-16">
         <Image
           src={placeholder}
           alt="Placeholder"
@@ -20,9 +20,7 @@ export default function Hero() {
             outcomes for businesses. Whether we&apos;re helping clients build
             stronger financial foundations or guiding them through strategic
             decisions, it&apos;s our collaboration, discipline, and shared
-            values that move us forward. <br />
-            <br /> We believe in limitless potential; and together, we make
-            possibilities happen.
+            values that move us forward.
           </p>
         </div>
       </div>

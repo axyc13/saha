@@ -11,6 +11,7 @@ import { Media } from "./collections/Media";
 import Terms from "./collections/Terms";
 import Policies from "./collections/Policies";
 import Values from "./collections/Values";
+import Contacts from "./collections/Contacts";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -22,7 +23,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Terms, Policies, Values],
+  collections: [Users, Media, Terms, Policies, Values, Contacts],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {
