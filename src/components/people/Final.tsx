@@ -4,8 +4,8 @@ import placeholder from "@/public/placeholder.jpg";
 
 export default function Final() {
   return (
-    <section className="w-screen h-screen text-black ">
-      <div className="flex flex-col justify-center gap-16">
+    <section className="w-screen h-screen text-black flex justify-center">
+      <div className="flex flex-col gap-16">
         <div></div>
         <div className="flex flex-row justify-center gap-16">
           <div className="flex flex-col gap-8 max-w-[48vw] py-8">

@@ -10,10 +10,8 @@ export default function Hero() {
         <h1 className="text-6xl">Sky&apos;s the Limit</h1>
         <h2 className="text-2xl">Saha</h2>
         <p className="break-normal">
-          Short Blub, Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Mauris eu molestie felis, nec imperdiet metus.Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit. Mauris eu molestie felis, nec
-          imperdiet metus.
+          Helping people and businesses build clarity, make confident decisions,
+          and realise limitless possibilities.
         </p>
         <Link href="/contactus">
           <button>Contact Us</button>

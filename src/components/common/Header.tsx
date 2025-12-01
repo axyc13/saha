@@ -6,20 +6,36 @@ import ArrowDropDown from "@/public/arrowDropDown.png";
 import WhoWeAreExtended from "./WhoWeAreExtended";
 import ServicesExtended from "./ServicesExtended";
 import Link from "next/link";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { Cancel01Icon, Menu01Icon } from "@hugeicons/core-free-icons";
 
 export default function Header() {
-  const [open, setOpen] = useState<string | null>(null);
-  const toggleOpen = (tab: string) => {
-    setOpen(open === tab ? null : tab);
+  type MenuTab = "whoweare" | "services" | "mobile" | undefined;
+  type MobilePage = "whoweare" | "services" | "menu";
+  const [open, setOpen] = useState<MenuTab>(undefined);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobilePage, setMobilePage] = useState<MobilePage>("menu");
+  const toggleOpen = (tab: MenuTab) => {
+    setOpen(open === tab ? undefined : tab);
   };
 
   return (
-    <header className="relative text-white bg-black ">
-      <div className="px-8 py-4 flex items-center gap-15">
-        <Link href="/">
-          <h1 className="text-3xl shrink-0">Saha</h1>
-        </Link>
-        <nav className="flex gap-8 flex-1 items-center text-sm">
+    <header className="relative text-white bg-black">
+      <div className="px-8 py-4 flex justify-center items-center gap-8 md:gap-16">
+        <div
+          onClick={() => {
+            {
+              setMobileOpen(!mobileOpen);
+              setOpen("mobile");
+            }
+          }}
+        >
+          <Link href="/">
+            <h1 className="text-3xl shrink-0">Saha</h1>
+          </Link>
+        </div>
+        {/* Desktop Nav */}
+        <nav className="gap-16 flex-1 items-center sm:text-xs text md:text-sm hidden md:flex">
           <div
             className="flex items-center cursor-pointer"
             onClick={() => toggleOpen("whoweare")}
@@ -53,32 +69,65 @@ export default function Header() {
             Careers
           </Link>
         </nav>
-        <p className="shrink-0 p-1 text-sm">NZ-EN</p>
+        {/* Mobile Nav */}
+        <nav className="flex md:hidden justify-end flex-1 ">
+          <HugeiconsIcon
+            icon={mobileOpen ? Cancel01Icon : Menu01Icon}
+            onClick={() => {
+              {
+                setMobileOpen(!mobileOpen);
+                setOpen("mobile");
+              }
+            }}
+          />
+        </nav>
+        <p className="text-sm">NZ-EN</p>
       </div>
 
       <div
         className={`
-      absolute left-0 top-full w-full z-50
+      absolute left-0 top-full w-full z-80
       transition-all duration-300
       ${
         open === "whoweare" ? "extendedAnimationOpen" : "extendedAnimationClose"
       }
     `}
       >
-        <WhoWeAreExtended />
+        <WhoWeAreExtended onBack={() => setOpen("mobile")} />
       </div>
 
       <div
         className={`
-      absolute left-0 top-full w-full z-50
+      absolute left-0 top-full w-full z-80
       transition-all duration-300
       ${
         open === "services" ? "extendedAnimationOpen" : "extendedAnimationClose"
       }
     `}
       >
-        <ServicesExtended />
+        <ServicesExtended onBack={() => setOpen("mobile")} />
       </div>
+      {/* MOBILE MENU DROPDOWN */}
+      {mobileOpen && mobilePage === "menu" && (
+        <div className="md:hidden absolute left-0 top-full w-screen h-screen bg-black text-white px-8 py-4 gap-4 flex flex-col z-50">
+          <div
+            onClick={() => toggleOpen("whoweare")}
+            className="flex flex-row items-center cursor-pointer"
+          >
+            Who We Are
+            <Image src={ArrowDropDown} alt="Arrow" className="rotate-270" />
+          </div>
+          <div
+            onClick={() => toggleOpen("services")}
+            className="flex flex-row items-center cursor-pointer"
+          >
+            Our Services
+            <Image src={ArrowDropDown} alt="Arrow" className="rotate-270" />
+          </div>
+          <Link href="/contactus">Contact Us</Link>
+          <Link href="/careers">Careers</Link>
+        </div>
+      )}
     </header>
   );
 }
