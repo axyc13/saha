@@ -10,7 +10,7 @@ export default function Hero() {
       items-center justify-center lg:justify-around gap-8 lg:gap-16 px-4 sm:px-8"
     >
       {/* Text content */}
-      <div className="flex flex-col gap-4 max-w-lg text-center md:text-left">
+      <div className="flex flex-col gap-4 md:gap-8 max-w-lg text-center md:text-left">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl">
           Sky&apos;s the Limit
         </h1>

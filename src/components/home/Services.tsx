@@ -5,42 +5,43 @@ import placeholder from "@/public/placeholder.jpg";
 
 export default function Services() {
   return (
-    <section className="w-screen h-screen text-black ">
-      <div className="flex flex-col items-center gap-16">
-        <h1 className="text-6xl">What Does Saha Do?</h1>
+    <section className="w-screen min-h-screen text-black px-8 py-8 flex flex-col items-center gap-8 lg:gap-16">
+      {/* Header */}
+      <h1 className="text-4xl sm:text-5xl lg:text-6xl text-center">
+        What Does Saha Do?
+      </h1>
 
-        <div className="flex flex-row justify-center gap-16">
-          <div className="flex flex-col gap-8 max-w-[48vw] py-16">
-            <p className="break-normal">
-              Saha delivers a full-spectrum financial advisory service,
-              combining deep hands-on management with strategic insights. We
-              partner with you to design and run your finance function — from
-              monthly and quarterly reporting, budgeting and cash-flow
-              monitoring to oversight of payroll, accounting, and
-              payables/receivables. At the same time, we help you sharpen your
-              strategic vision: setting performance KPIs, building long-term
-              financial roadmaps, modelling growth scenarios, and supporting
-              director-level decision-making. <br />
-              <br /> Beyond the numbers, Saha strengthens your business&apos;s
-              backbone. We embed robust financial controls, manage compliance
-              and risk, and streamline processes with smart automation. Whether
-              you&apos;re aiming to raise capital, plan for future growth, or
-              improve profitability, we guide you with clear, actionable advice.
-              With our global reach and industry-tailored expertise, we&apos;re
-              here to help you transform, grow, and operate with confidence.
-            </p>
+      {/* Content */}
+      <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 w-full max-w-6xl">
+        {/* Text */}
+        <div className="flex flex-col gap-8 lg:max-w-[48%] text-left text-sm sm:text-base lg:text-lg leading-relaxed">
+          <p>
+            Saha delivers a full-spectrum financial advisory service, combining
+            deep hands-on management with strategic insights. We partner with
+            you to design and run your finance function — from budgeting to
+            cash-flow monitoring to accounting, and more.
+          </p>
+          <p>
+            Beyond the numbers, Saha strengthens your business&apos;s backbone.
+            Whether you&apos;re aiming to raise capital, plan for future growth,
+            or improve profitability, our global reach and industry-tailored
+            expertise, will help you transform, grow, and operate with
+            confidence.
+          </p>
+          <div className="flex justify-center lg:justify-start">
             <Link href="/services">
               <button>Learn More</button>
             </Link>
           </div>
+        </div>
 
-          <div>
-            <Image
-              src={placeholder}
-              alt="Placeholder"
-              className="max-w-lg h-auto"
-            />
-          </div>
+        {/* Image */}
+        <div className="flex justify-center lg:max-w-[48%] w-full">
+          <Image
+            src={placeholder}
+            alt="Placeholder"
+            className="w-100 h-60 sm:w-80 lg:w-full lg:h-auto object-cover"
+          />
         </div>
       </div>
     </section>

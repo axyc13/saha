@@ -13,16 +13,16 @@ import {
 export default function Footer() {
   return (
     <footer className="relative w-full h-92 lg:h-112 text-white bg-black flex flex-col justify-around">
-      <div className="flex flex-row gap-12 md:gap-16 lg:gap-32 justify-center md:justify-normal items-center ">
-        <div className="">
+      <div className="flex flex-row md:gap-16 lg:gap-32 justify-center md:justify-normal items-center ">
+        <div>
           <Image
             src={logo}
             alt="Saha logo"
-            className="rounded-full w-30 md:w-60 lg:w-80 h-30 md:h-60 lg:h-80"
+            className="hidden md:flex rounded-full md:w-60 lg:w-80 md:h-60 lg:h-80"
           />
         </div>
 
-        <div className="flex flex-row gap-8 md:gap-12 lg:gap-16">
+        <div className="flex flex-row gap-16">
           <div>
             <h2 className="text-xl lg:text-3xl pb-8">Quick Links</h2>
             <div className="flex flex-col gap-5 text-sm md:text-md lg:text-[17px]">
@@ -39,11 +39,20 @@ export default function Footer() {
               <Link href="/contactus">Contact Us</Link>
               <Link href="/careers">Careers</Link>
             </div>
+            <div className="md:hidden grid grid-cols-2 gap-y-3 py-6">
+              <HugeiconsIcon icon={Linkedin02Icon} className="w-6 h-6 " />
+              <HugeiconsIcon icon={Facebook02Icon} className="w-6 h-6" />
+              <HugeiconsIcon icon={NewTwitterIcon} className="w-6 h-6" />
+              <HugeiconsIcon icon={InstagramIcon} className="w-6 h-6" />
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-2 md:flex flex-row gap-5 absolute right-22 md:right-16 bottom-24">
+      <div
+        className="hidden md:flex flex-row gap-5 absolute 
+      right-8 sm:right-22 md:right-16 bottom-24"
+      >
         <HugeiconsIcon
           icon={Linkedin02Icon}
           className="w-6 md:w-8 h-6 md:h-8"
