@@ -5,11 +5,11 @@ import placeholder from "@/public/placeholder.jpg";
 
 export default function OurPeople() {
   return (
-    <section className="w-screen h-screen text-black flex justify-center">
-      <div className="flex flex-row max-w-[88vw] items-center">
-        <div className="flex flex-col gap-8 ">
-          <h1 className="text-6xl">Our People</h1>
-          <p className="break-normal">
+    <section className="w-screen min-h-screen text-black p-8 flex flex-col justify-center items-center gap-8 lg:gap-16">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-16 w-full max-w-[92vw]">
+        <div className="flex flex-col gap-8 lg:max-w-[48vw] lg:py-16 justify-center text-sm lg:text-base leading-relaxed">
+          <h1 className="text-4xl lg:text-6xl">Our People</h1>
+          <p>
             At Saha, everything begins with our people. Our team is driven by
             curiosity, grounded in honesty, and committed to creating real
             outcomes for businesses. Whether we&apos;re helping clients build
@@ -21,16 +21,18 @@ export default function OurPeople() {
             We believe in limitless potential; and together, we make
             possibilities happen.
           </p>
-          <Link href="/whoweare/people">
-            <button>Learn More</button>
-          </Link>
+          <div className="flex justify-center lg:justify-start">
+            <Link href="/whoweare/people">
+              <button>Learn More</button>
+            </Link>
+          </div>
         </div>
 
-        <div>
+        <div className="flex justify-center lg:max-w-[48%] w-full">
           <Image
             src={placeholder}
             alt="Placeholder"
-            className="max-w-lg h-auto"
+            className="w-100 h-60 sm:w-80 lg:w-full lg:h-auto object-cover"
           />
         </div>
       </div>
