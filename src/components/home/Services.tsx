@@ -5,7 +5,7 @@ import placeholder from "@/public/placeholder.jpg";
 
 export default function Services() {
   return (
-    <section className="w-screen min-h-screen text-black px-8 py-8 flex flex-col items-center gap-8 lg:gap-16">
+    <section className="w-screen max-h-screen md:min-h-screen text-black px-8 my-8 flex flex-col justify-center items-center gap-8 lg:gap-16">
       {/* Header */}
       <h1 className="text-4xl sm:text-5xl lg:text-6xl text-center">
         What Does Saha Do?
@@ -14,7 +14,7 @@ export default function Services() {
       {/* Content */}
       <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 w-full max-w-6xl">
         {/* Text */}
-        <div className="flex flex-col gap-8 lg:max-w-[48%] text-left text-sm sm:text-base lg:text-lg leading-relaxed">
+        <div className="flex flex-col gap-8 lg:max-w-[48%] text-left text-sm lg:text-base leading-relaxed">
           <p>
             Saha delivers a full-spectrum financial advisory service, combining
             deep hands-on management with strategic insights. We partner with
@@ -40,7 +40,7 @@ export default function Services() {
           <Image
             src={placeholder}
             alt="Placeholder"
-            className="w-100 h-60 sm:w-80 lg:w-full lg:h-auto object-cover"
+            className="w-100 h-60 md:w-150 md:h-80 lg:w-full lg:h-auto object-cover"
           />
         </div>
       </div>

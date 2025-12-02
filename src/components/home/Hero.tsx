@@ -6,8 +6,8 @@ import placeholder from "@/public/placeholder.jpg";
 export default function Hero() {
   return (
     <section
-      className="w-screen min-h-screen bg-black text-white flex flex-col lg:flex-row 
-      items-center justify-center lg:justify-around gap-8 lg:gap-16 px-4 sm:px-8"
+      className="w-screen max-h-screen md:min-h-screen p-8 bg-black text-white flex flex-col lg:flex-row 
+      items-center justify-center lg:justify-around gap-8 lg:gap-16"
     >
       {/* Text content */}
       <div className="flex flex-col gap-4 md:gap-8 max-w-lg text-center md:text-left">
@@ -31,7 +31,7 @@ export default function Hero() {
         <Image
           src={placeholder}
           alt="Placeholder"
-          className="w-64 sm:w-80 lg:w-96 h-auto object-contain"
+          className="w-100 h-60 md:w-150 md:h-80 lg:w-96 object-cover"
         />
       </div>
     </section>

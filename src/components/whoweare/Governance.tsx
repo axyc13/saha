@@ -5,7 +5,7 @@ import placeholder from "@/public/placeholder.jpg";
 
 export default function Governance() {
   return (
-    <section className="w-screen min-h-screen text-black p-8 flex flex-col items-center gap-8 lg:gap-16">
+    <section className="w-screen max-h-screen md:min-h-screen text-black p-8 flex flex-col items-center gap-8 lg:gap-16">
       <h1 className="lg:px-8 lg:self-end text-4xl lg:text-6xl">Governance</h1>
       <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 w-full max-w-[92vw]">
         <div className="flex flex-col gap-8 lg:max-w-[48vw] lg:py-16 justify-center text-sm lg:text-base leading-relaxed">
@@ -31,7 +31,7 @@ export default function Governance() {
           <Image
             src={placeholder}
             alt="Placeholder"
-            className="w-100 h-60 sm:w-80 lg:w-full lg:h-auto object-cover"
+            className="w-100 h-60 md:w-150 md:h-80 lg:w-full lg:h-auto object-cover"
           />
         </div>
       </div>

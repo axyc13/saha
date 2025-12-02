@@ -30,7 +30,7 @@ export default async function OurValues() {
   return (
     <section
       id="values"
-      className="w-screen min-h-screen text-black flex flex-col gap-8"
+      className="w-screen min-h-screen py-8 text-black flex flex-col gap-8"
     >
       <h1 className="flex justify-center md:justify-normal text-4xl md:text-6xl lg:px-16">
         Our Values
