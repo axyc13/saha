@@ -1,11 +1,21 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { getServices } from "src/lib/payload/services";
+import type { Service } from "@/src/types/service";
 type Props = {
   onBack: () => void; // for mobile back button
   onLinkClick: () => void; // for link clicks
 };
 
 export default function ServicesExtended({ onBack, onLinkClick }: Props) {
+  const [services, setServices] = useState<Service[]>([]);
+
+  useEffect(() => {
+    getServices().then(setServices);
+  }, []);
+
   return (
     <div className="text-white bg-black h-screen md:h-[70vh]">
       <div className="hidden md:flex flex-row px-16 py-4">
@@ -23,59 +33,16 @@ export default function ServicesExtended({ onBack, onLinkClick }: Props) {
           </Link>
         </div>
         <div className="flex flex-col flex-1 pl-16 justify-center">
-          <Link
-            href="/services"
-            onClick={onLinkClick}
-            className="border-b p-4 hover:bg-white hover:text-black"
-          >
-            <h2 className="text-md">Financial Management & Oversight</h2>
-          </Link>
-          <Link
-            href="/services"
-            onClick={onLinkClick}
-            className="border-b p-4 hover:bg-white hover:text-black"
-          >
-            <h2 className="text-md">Strategic Planning & Advisory</h2>
-          </Link>
-          <Link
-            href="/services"
-            onClick={onLinkClick}
-            className="border-b p-4 hover:bg-white hover:text-black"
-          >
-            <h2 className="text-md">Regulatory Compliance & Risk</h2>
-          </Link>
-          <Link
-            href="/services"
-            onClick={onLinkClick}
-            className="border-b p-4 hover:bg-white hover:text-black"
-          >
-            <h2 className="text-md">
-              Operational Efficiency & Process Improvement
-            </h2>
-          </Link>
-          <Link
-            href="/services"
-            onClick={onLinkClick}
-            className="border-b p-4 hover:bg-white hover:text-black"
-          >
-            <h2 className="text-md">
-              Performance Monitoring & Business Insights
-            </h2>
-          </Link>
-          <Link
-            href="/services"
-            onClick={onLinkClick}
-            className="border-b p-4 hover:bg-white hover:text-black"
-          >
-            <h2 className="text-md">Funding & Capital Structuring</h2>
-          </Link>
-          <Link
-            href="/services"
-            onClick={onLinkClick}
-            className="border-b p-4 hover:bg-white hover:text-black"
-          >
-            <h2 className="text-md">Add-On Services</h2>
-          </Link>
+          {services.map((s) => (
+            <Link
+              href={`/services/${s.title}`}
+              onClick={onLinkClick}
+              className="border-b p-4 hover:bg-white hover:text-black"
+              key={s.id}
+            >
+              <h2 className="text-md">{s.title}</h2>
+            </Link>
+          ))}
         </div>
       </div>
 
@@ -100,60 +67,18 @@ export default function ServicesExtended({ onBack, onLinkClick }: Props) {
             onClick={onLinkClick}
             className="border-b p-4 hover:bg-white hover:text-black"
           >
-            <h2 className="text-sm md:text-md">
-              Financial Management & Oversight
-            </h2>
+            <h2 className="text-sm md:text-md">Overview</h2>
           </Link>
-          <Link
-            href="/services"
-            onClick={onLinkClick}
-            className="border-b p-4 hover:bg-white hover:text-black"
-          >
-            <h2 className="text-sm md:text-md">
-              Strategic Planning & Advisory
-            </h2>
-          </Link>
-          <Link
-            href="/services"
-            onClick={onLinkClick}
-            className="border-b p-4 hover:bg-white hover:text-black"
-          >
-            <h2 className="text-sm md:text-md">Regulatory Compliance & Risk</h2>
-          </Link>
-          <Link
-            href="/services"
-            onClick={onLinkClick}
-            className="border-b p-4 hover:bg-white hover:text-black"
-          >
-            <h2 className="text-sm md:text-md">
-              Operational Efficiency & Process Improvement
-            </h2>
-          </Link>
-          <Link
-            href="/services"
-            onClick={onLinkClick}
-            className="border-b p-4 hover:bg-white hover:text-black"
-          >
-            <h2 className="text-sm md:text-md">
-              Performance Monitoring & Business Insights
-            </h2>
-          </Link>
-          <Link
-            href="/services"
-            onClick={onLinkClick}
-            className="border-b p-4 hover:bg-white hover:text-black"
-          >
-            <h2 className="text-sm md:text-md">
-              Funding & Capital Structuring
-            </h2>
-          </Link>
-          <Link
-            href="/services"
-            onClick={onLinkClick}
-            className="border-b p-4 hover:bg-white hover:text-black"
-          >
-            <h2 className="text-sm md:text-md">Add-On Services</h2>
-          </Link>
+          {services.map((s) => (
+            <Link
+              href={`/services/${s.title}`}
+              onClick={onLinkClick}
+              className="border-b p-4 hover:bg-white hover:text-black"
+              key={s.id}
+            >
+              <h2 className="text-sm md:text-md">{s.title}</h2>
+            </Link>
+          ))}
         </div>
       </div>
     </div>
