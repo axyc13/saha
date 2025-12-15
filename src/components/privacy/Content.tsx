@@ -1,6 +1,7 @@
 import React from "react";
 import type { Policy } from "@/src/types/policy";
 import { getPolicies } from "@/src/lib/payload/policies";
+import { RichText } from "@payloadcms/richtext-lexical/react";
 
 export default async function Contact() {
   const sections: Policy[] = await getPolicies();
@@ -12,9 +13,9 @@ export default async function Contact() {
           <div key={sec.id} className="px-8 md:px-16">
             <h1 className="text-2xl md:text-3xl">{sec.title}</h1>
             <br />
-            <p className="text-sm md:text-base whitespace-pre-line">
-              {sec.body}
-            </p>
+            <div className="text-sm md:text-base [&_li]:ml-4 whitespace-pre-line">
+              <RichText data={sec.body} />
+            </div>
           </div>
         ))}
       </div>

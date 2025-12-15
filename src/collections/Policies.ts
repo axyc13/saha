@@ -25,7 +25,7 @@ const Policies: CollectionConfig = {
     },
     {
       name: "body",
-      type: "textarea",
+      type: "richText",
       required: true,
     },
   ],
