@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import placeholder from "@/public/placeholder.jpg";
+import BreadCrumb from "../common/BreadCrumb";
 
 export default function Hero() {
   return (
@@ -13,6 +14,7 @@ export default function Hero() {
         />
 
         <div className="flex flex-col gap-8 px-8 lg:px-16 relative z-10 ">
+          <BreadCrumb />
           <h1 className="text-4xl lg:text-6xl">
             Strong governance for a bold future
           </h1>
