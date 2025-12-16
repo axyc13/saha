@@ -4,12 +4,18 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   webpack: (config, { isServer }) => {
     if (isServer) {
-      config.externals = config.externals || [];
-      config.externals.push({
-        pino: "commonjs pino",
-        "thread-stream": "commonjs thread-stream",
-        "pino-pretty": "commonjs pino-pretty",
-      });
+      // Externalize problematic packages
+      const externals = config.externals || [];
+      if (Array.isArray(externals)) {
+        externals.push(
+          "pino",
+          "thread-stream",
+          "pino-pretty",
+          "sonic-boom",
+          "pino-std-serializers"
+        );
+      }
+      config.externals = externals;
     }
     return config;
   },
