@@ -30,6 +30,7 @@
     "@types/react-dom": "^19.2.3",
     "eslint": "^9.39.1",
     "eslint-config-next": "16.0.3",
+    "null-loader": "^4.0.1",
     "tailwindcss": "^4.1.17",
     "tap": "^21.5.0",
     "typescript": "^5.9.3",
