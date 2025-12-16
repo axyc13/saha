@@ -31,12 +31,8 @@
     "eslint": "^9.39.1",
     "eslint-config-next": "16.0.3",
     "tailwindcss": "^4.1.17",
+    "tap": "^21.5.0",
     "typescript": "^5.9.3",
     "why-is-node-running": "^3.2.2"
-  },
-  "pnpm": {
-    "neverBuiltDependencies": [
-      "thread-stream"
-    ]
   }
 }
