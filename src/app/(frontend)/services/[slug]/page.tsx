@@ -4,6 +4,7 @@ import ServicePageContent from "@/src/components/services/pages/ServicePageConte
 import ServicePageHero from "@/src/components/services/pages/ServicePageHero";
 import Header from "@/src/components/common/Header";
 import Footer from "@/src/components/common/Footer";
+import "../../globals.css";
 
 export default async function ServicePage({
   params,

@@ -15,10 +15,10 @@ export default function Hero() {
       <div className="flex flex-col gap-8 px-8">
         <h1 className="text-6xl">Careers</h1>
         <p className="break-normal w-[80vw]">
-          Short career inspiring blurb. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Mauris eu molestie felis, nec imperdiet metus.Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu molestie
-          felis, nec imperdiet metus
+          At Saha, your career is more than a job, it&apos;s a chance to shape
+          tomorrow. As part of our network, you&apos;ll collaborate with
+          talented people from all around the world, solving important problems
+          for clients, communities, and society.
         </p>
       </div>
     </section>

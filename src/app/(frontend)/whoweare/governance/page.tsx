@@ -4,6 +4,7 @@ import Hero from "@/src/components/governance/Hero";
 import Second from "@/src/components/governance/Second";
 import Structures from "@/src/components/governance/Structures";
 import Final from "@/src/components/governance/Final";
+import "../../globals.css";
 
 export default async function WhoWeArePage() {
   return (
