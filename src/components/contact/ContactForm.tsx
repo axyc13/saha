@@ -26,27 +26,18 @@ export default function ContactForm() {
 
             {/* Saha Adress */}
             <div className="border w-80 h-80 hidden lg:flex flex-col p-8 gap-2 text-sm">
-              <h1 className="text-2xl">Saha Auckland</h1>
-              <p> 123 Address Place, Auckland, 1234</p>
-              <p>
-                <b>Postage:</b>
-                <br />
-                Private Bag 1234 Auckland
-              </p>
+              <h1 className="text-2xl">Satyam Saha CA</h1>
+              <p>20 Boundary Road, Blockhouse Bay, Auckland 0600</p>
+              <p>1105B Karamu Road North, Hastings, Hawke&apos;s Bay</p>
               <p>
                 <b>Email:</b>
                 <br />
-                help@saha.co.nz
+                satyamsaha.ca@gmail.com
               </p>
               <p>
                 <b>Phone:</b>
                 <br />
-                +64 123 4567
-              </p>
-              <p>
-                <b>Fax:</b>
-                <br />
-                +64 123 4567
+                022 315 5751
               </p>
             </div>
           </div>

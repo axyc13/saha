@@ -15,8 +15,8 @@ export default function ServiceTest({ service }: ServiceProp) {
             {service.title}
           </h1>
           <RichText
-            data={service.paragraph1}
-            className="text-xs lg:text-sm group-hover:text-black"
+            data={service.paragraph2}
+            className="text-xs lg:text-sm group-hover:text-black [&_p]:text-left!"
           />
         </div>
       </div>
