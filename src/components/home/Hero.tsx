@@ -1,16 +1,25 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import placeholder from "@/public/placeholder.jpg";
+import hero from "@/public/hero.png";
 
 export default function Hero() {
   return (
     <section
-      className="w-screen min-h-screen p-8 bg-black text-white flex flex-col lg:flex-row 
-      items-center justify-center lg:justify-around gap-8 lg:gap-16"
+      className="relative w-screen min-h-screen bg-black text-white 
+      flex items-center justify-end"
     >
+      {/* Background image */}
+      <Image
+        src={hero}
+        alt="hero image"
+        fill
+        priority
+        className="object-cover z-0"
+      />
+
       {/* Text content */}
-      <div className="flex flex-col gap-4 md:gap-8 max-w-lg text-center md:text-left">
+      <div className="relative z-10 flex flex-col gap-4 md:gap-8 max-w-lg text-center md:text-right p-8 lg:p-0 lg:mr-24 lg:mb-16">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl">
           Sky&apos;s the Limit
         </h1>
@@ -19,20 +28,9 @@ export default function Hero() {
           Helping people and businesses build clarity, make confident decisions,
           and realise limitless possibilities.
         </p>
-        <div className="mt-4 flex justify-center md:justify-start">
-          <Link href="/contactus">
-            <button>Contact Us</button>
-          </Link>
-        </div>
-      </div>
-
-      {/* Image */}
-      <div className="flex justify-center w-full sm:w-auto">
-        <Image
-          src={placeholder}
-          alt="Placeholder"
-          className="w-100 h-60 md:w-150 md:h-80 lg:w-96 object-cover"
-        />
+        <Link href="/contactus">
+          <button>Contact Us</button>
+        </Link>
       </div>
     </section>
   );
