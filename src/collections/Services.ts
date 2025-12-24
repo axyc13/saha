@@ -35,12 +35,6 @@ const Services: CollectionConfig = {
       required: true,
     },
     {
-      name: "photo",
-      type: "upload",
-      relationTo: "media",
-      required: true,
-    },
-    {
       name: "bullet-points",
       type: "richText",
       required: true,
