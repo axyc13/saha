@@ -36,22 +36,21 @@ export default buildConfig({
     pool: {
       connectionString: process.env.DATABASE_URL,
     },
-    migrationDir: "./migrations", // Use migrations instead of auto-creation
+    migrationDir: "./migrations",
   }),
   sharp,
   plugins: [
     s3Storage({
       collections: {
-        media: { prefix: "media" }, // optional folder prefix
-        // you can add more collections if needed
+        media: true,
       },
-      bucket: process.env.S3_BUCKET || "",
+      bucket: process.env.S3_BUCKET!,
       config: {
         credentials: {
-          accessKeyId: process.env.AWS_ACCESS_KEY_ID || "",
-          secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY || "",
+          accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
+          secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!,
         },
-        region: process.env.AWS_REGION || "",
+        region: process.env.AWS_REGION!,
       },
     }),
   ],
