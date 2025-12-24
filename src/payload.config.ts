@@ -27,6 +27,7 @@ export default buildConfig({
   collections: [Users, Media, Terms, Policies, Values, Contacts, Services],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
+  cors: ["https://www.saha.co.nz"],
   typescript: {
     outputFile: path.resolve(dirname, "payload-types.ts"),
   },
