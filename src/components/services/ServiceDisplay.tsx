@@ -28,7 +28,7 @@ export default function ServiceDisplay({ services }: ServiceProps) {
               onMouseLeave={() => setHoveredServiceId(null)}
               className="border-b p-4 hover:bg-black hover:text-white"
             >
-              <h2 className="text-base lg:text-base">{s.title}</h2>
+              <h2 className="text-sm lg:text-base">{s.title}</h2>
             </Link>
           ))}
         </div>

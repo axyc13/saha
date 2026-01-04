@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Second() {
   return (
-    <section className="text-black flex flex-col items-center border-b lg:border-b-0 lg:border-r p-8">
-      <div className="flex flex-col gap-8 lg:max-w-[48vw] lg:py-16 justify-center text-sm lg:text-base leading-relaxed">
+    <section className="text-black flex flex-col items-center border-b lg:border-b-0 lg:border-r py-8 lg:p-16">
+      <div className="flex flex-col gap-8 items-center justify-center text-sm lg:text-base leading-relaxed">
         <h1 className="text-2xl lg:text-4xl">The People Who Shape Us</h1>
         <p>
           Our team brings experience across finance, accounting, analytics, and

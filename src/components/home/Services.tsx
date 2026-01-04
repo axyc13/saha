@@ -7,11 +7,10 @@ export default function Services() {
       {/* Header */}
       <div className="flex flex-col lg:flex-row justify-center items-center w-[80vw] lg:w-[88vw] gap-8 lg:gap-16">
         <h1 className="text-3xl sm:text-5xl lg:text-6xl">What Does Saha Do?</h1>
-
         {/* Content */}
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 w-full">
           {/* Text */}
-          <div className="flex flex-col gap-8 text-left text-sm lg:text-base leading-relaxed">
+          <div className="flex flex-col gap-8 text-left text-sm lg:text-lg leading-relaxed">
             <p>
               Saha delivers a full-spectrum financial advisory service,
               combining deep hands-on management with strategic insights. We

@@ -30,13 +30,13 @@ export default async function OurValues() {
   return (
     <section
       id="values"
-      className="w-screen min-h-screen py-8 text-black flex flex-col gap-8"
+      className="w-screen min-h-screen pt-8 lg:pt-16 text-black flex flex-col gap-8"
     >
       <h1 className="flex justify-center md:justify-normal text-4xl md:text-6xl lg:px-24">
         Our Values
       </h1>
 
-      <div className="bg-black w-screen h-screen grid grid-cols-2 sm:grid-cols-4 sm:grid-rows-2 place-items-center">
+      <div className="bg-black py-8 w-screen h-screen grid grid-cols-2 sm:grid-cols-4 sm:grid-rows-2 place-items-center">
         {sections.map((v, id) => {
           const IconComponent = icons[id];
           return <ValueCard key={id} icon={IconComponent} text={v.text} />;

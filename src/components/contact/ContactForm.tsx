@@ -108,7 +108,7 @@ export default function ContactForm() {
         >
           {status === "success"
             ? "Message sent successfully!"
-            : "Failed to send message."}
+            : "Failed to send message. Retry or email us directly."}
         </div>
       )}
     </section>

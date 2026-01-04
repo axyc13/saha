@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Final() {
   return (
-    <section className="w-screen min-h-screen text-black flex flex-col gap-16 justify-center px-16 py-8">
+    <section className="w-screen min-h-screen text-black flex flex-col gap-16 justify-center px-16 py-8  bg-gray-100">
       <h1 className="text-3xl lg:text-4xl lg:px-16 ">
         Shaping a responsible, future-focused <br />
         organisation:

@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Final() {
   return (
-    <section className="text-black flex flex-col items-center p-8">
-      <div className="flex flex-col gap-8 lg:max-w-[48vw] lg:py-16 justify-center text-sm lg:text-base leading-relaxed">
+    <section className="text-black flex flex-col items-center py-8 lg:p-16">
+      <div className="flex flex-col gap-8 items-center justify-center text-sm lg:text-base leading-relaxed">
         <h1 className="text-2xl lg:text-4xl">Built on trust, and discipline</h1>
         <p>
           Saha is built on a simple idea: <b>people first.</b> Our culture is

@@ -7,12 +7,15 @@ interface ServiceProp {
   service: Service;
 }
 
-export default function ServiceTest({ service }: ServiceProp) {
+export default function ServiceList({ service }: ServiceProp) {
   return (
-    <section className="w-[48vw] lg:w-full h-[40vh] lg:h-full text-white flex flex-col justify-center items-center border-l-4 p-4 lg:p-8 group hover:bg-white transition-colors hover:border-black">
-      <div className="flex flex-col lg:flex-row items-center gap-8">
-        <div className="flex flex-col justify-center text-sm lg:text-base leading-relaxed gap-4">
-          <Link href={`/services/${service.slug}`}>
+    <section className="">
+      <div className="w-full h-auto overflow-scroll text-white flex flex-col justify-center items-center border-l-4 p-4 lg:p-8 group hover:bg-white transition-colors hover:border-black">
+        <div className="flex flex-col lg:flex-row items-center gap-8">
+          <Link
+            href={`/services/${service.slug}`}
+            className="flex flex-col justify-center text-sm lg:text-base leading-relaxed gap-4"
+          >
             <h1 className="text-base lg:text-xl group-hover:text-black">
               {service.title}
             </h1>

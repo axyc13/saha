@@ -2,14 +2,14 @@ import React from "react";
 
 export default function Structures() {
   return (
-    <section className="w-screen min-h-screen text-black flex flex-col justify-center items-center p-8 gap-16">
+    <section className="w-screen min-h-screen text-black flex flex-col justify-center items-center p-8 lg:py-16 gap-8 lg:gap-16 bg-gray-50">
       <h1 className="text-4xl lg:text-5xl ">Governance Structures at Saha</h1>
       <div
-        className="grid grid-cols-1 md:grid-cols-2 gap-8 gap-x-32 bg-white
+        className="grid grid-cols-1 md:grid-cols-2 gap-8 gap-x-32
         [&_div]:lg:w-80 [&_div]:lg:h-72 [&_div]:w-64 [&_div]:h-56 [&_div]:border-2 [&_div]:flex [&_div]:flex-col [&_div]:justify-center 
-        [&_div]:gap-8 [&_div]:px-4 [&_div]:items-center [&_div]:rounded-4xl [&_div]:shadow-xl
+        [&_div]:gap-4 [&_div]:px-8 [&_div]:items-center [&_div]:rounded-3xl [&_div]:shadow-xl
         [&_h2]:lg:text-2xl [&_h2]:text-xl text-center 
-        [&_p]:lg:text-base [&_p]:text-xs"
+        [&_p]:lg:text-base [&_p]:text-xs [&_div]:transform [&_div]:hover:scale-105 [&_div]:transition-transform [&_div]:cursor-pointer"
       >
         <div>
           <h2>Leadership Oversight</h2>

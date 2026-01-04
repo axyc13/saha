@@ -7,7 +7,7 @@ export default function BreadCrumb() {
   const segments = pathname.split("/").filter(Boolean);
 
   return (
-    <div className="flex gap-2 text-sm z-10">
+    <div className="flex gap-2 text-xs lg:text-sm z-10">
       {segments.map((segment, index) => {
         const href = "/" + segments.slice(0, index + 1).join("/");
         return (
