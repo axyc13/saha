@@ -17,7 +17,7 @@ export default function ServicesExtended({ onBack, onLinkClick }: Props) {
   }, []);
 
   return (
-    <div className="text-white bg-black h-auto">
+    <div className="text-white bg-black h-auto lg:py-8">
       <div className="hidden md:flex flex-row px-16 py-4">
         <div className="border-r-2 pr-16">
           <h2 className="text-2xl pb-8">Our Services</h2>
@@ -32,7 +32,7 @@ export default function ServicesExtended({ onBack, onLinkClick }: Props) {
             <button>Explore</button>
           </Link>
         </div>
-        <div className="flex flex-col flex-1 pl-16 justify-center">
+        <div className="grid grid-cols-2 px-16 gap-x-16 items-center justify-center w-full">
           {services.map((s) => (
             <Link
               href={`/services/${s.slug}`}

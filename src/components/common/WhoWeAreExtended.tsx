@@ -7,7 +7,7 @@ type Props = {
 
 export default function WhoWeAreExtended({ onBack, onLinkClick }: Props) {
   return (
-    <div className=" text-white bg-black h-screen md:h-[50vh]">
+    <div className=" text-white bg-black h-auto lg:py-8">
       {/*Desktop*/}
       <div className="hidden md:flex flex-row px-16 py-4">
         <div className="border-r-2 pr-16">
